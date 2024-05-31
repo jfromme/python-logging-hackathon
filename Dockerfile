@@ -13,4 +13,5 @@ RUN mkdir -p data
 # Add additional dependencies below ...
 RUN pip install -r /service/requirements.txt
 
-ENTRYPOINT [ "python3.9", "/service/main.py" ]
+
+ENTRYPOINT python3.9 /service/main.py >${OUTPUT_DIR}/log.txt 2>&1
